@@ -2,7 +2,7 @@
 #requisito inicial que la maquina coloque la X en el centro del tablero.
 #primer git
 #C:\Users\jdpm2\OneDrive\Escritorio\Github\tic _tac_toe.py
-#Nuevo comentario random
+#Nuevo comentario random2
 import random
 f1 = [1,2,3]
 f2 = [4,5,6]
@@ -23,7 +23,7 @@ def dibujaTablero():
     print("|       |       |       |")
     print("+-------+-------+-------+")
 
-def jugadaSkynet(i):
+def jugadaDepredador(i):
     if i == 0:
         lt[1][1] = "X"
     else:
@@ -39,7 +39,7 @@ def jugadaSkynet(i):
                 lt[2][(a-1)-6] = "X"
                 return True
 
-def jugadaSara(jug):
+def jugadaAlien(jug):
     if jug in f1:
         lt[0][jug-1] = "O"
         return True
@@ -100,30 +100,30 @@ def fin():
         return result
 
 
-print("Skynet a hecho su primera jugada, observa (°)(°)")
-jugadaSkynet(0)
+print("Depredador a hecho su primera jugada, observa (°)(°)")
+jugadaDepredador(0)
 dibujaTablero()
 juego = True
 while juego:
     valido = False
     while valido == False:
         O = int(input("Selecciona un numero de casilla para poner tu 'O' :"))
-        valido = jugadaSara(O)
+        valido = jugadaAlien(O)
         if valido == False:
             print("Casillero ocupado, reintenta")
         dibujaTablero()
-    print("Juega Skynet")
-    jugadaSkynet(1)
+    print("Juega Depredador")
+    jugadaDepredador(1)
     dibujaTablero()
     re = fin()
     if re == 1:
-        print("+----------------------------------------------------------+")
-        print("| Has derrotado a Skynet, salvaste al mundo Sara O'Connor. |")
-        print("+----------------------------------------------------------+")
+        print("+--------------------------------------------------------------------+")
+        print("| Has derrotado a Depredador, puedes seguir con el resto de humanos. |")
+        print("+--------------------------------------------------------------------+")
         break
     elif re == 2:
-        print("+-----------------------------------------------------------------------+")
-        print("| Skynet acabo contigo y ahora destruira al mundo, saludame al creador. |")
-        print("+-----------------------------------------------------------------------+")
+        print("+-------------------------------------------------+")
+        print("| Depredador acabo contigo y ahora a toda tu raza |")
+        print("+-------------------------------------------------+")
         break
 print("fin del juego")
