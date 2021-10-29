@@ -128,3 +128,4 @@ while juego:
         print("+-----------------------------------------------------------------------+")
         break
 print("fin del juego")
+print("aprendi a usar git y github =)")
