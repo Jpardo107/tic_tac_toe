@@ -3,6 +3,7 @@
 #primer git
 #C:\Users\jdpm2\OneDrive\Escritorio\Github\tic _tac_toe.py
 #Nuevo comentario random
+#Comentario desde repositorio clonado
 import random
 f1 = [1,2,3]
 f2 = [4,5,6]
